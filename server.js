@@ -3,7 +3,7 @@ var info = {
     numberMessages: 0,
     connected: 0
 }
-var author = ''
+var author = 'acho que colocar session aqui já resolve'
 
 
 socket.on('receivedMessage', function(message){
@@ -24,6 +24,9 @@ socket.on('ConnectionsInfo', function(connectionsInfo){
     renderConnectionsInfo();
 })
 
+localStorage.setItem('user', colocar session)
+        author = colocar session
+
 getAuthor()
         
 function getAuthor(){
@@ -33,7 +36,7 @@ function getAuthor(){
         author = user
     }
     else if(!user){
-        toggleBoxForNewUser('tog')
+        author = colocar session
     }
 }
 
@@ -89,7 +92,7 @@ function renderConnectionsInfo(){
 
     $('#messages-received').html(`<h3 id="messages-received"><i class="fad fa-inbox-in"></i> ${info.numberMessages} ${info.numberMessages === 1 ? "Mensagem" : "Mensagens"}</h3>`)
 }
-
+/* desativei pq ñ vai mais vir do form, vai ser session 
 function toggleBoxForNewUser(met){
     if(met === 'tog'){
         let input = document.getElementById('enter-user');
@@ -104,12 +107,12 @@ function toggleBoxForNewUser(met){
             return null
         }
         
-        localStorage.setItem('user', newUser)
-        author = newUser
+        localStorage.setItem('user', colocar session)
+        author = colocar session
         toggleBoxForNewUser('tog')
     }
 }
-
+*/
 function moveScroll(){
     var objDiv = document.getElementById("messages");
     objDiv.scrollTop = objDiv.scrollHeight;
