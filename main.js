@@ -4,6 +4,7 @@ var info = {
     connected: 0
 }
 var author = ''
+var forasteyros = '13'
 
 
 socket.on('receivedMessage', function(message){
@@ -24,13 +25,13 @@ socket.on('ConnectionsInfo', function(connectionsInfo){
     renderConnectionsInfo();
 })
 
-localStorage.setItem('user', colocar session)
-        author = colocar session
+localStorage.setItem('user', forasteyros)
+        author = forasteyros
 
 getAuthor()
         
 function getAuthor(){
-    let user = localStorage.getItem('user')
+    let user = forasteyros
 
     if(user){
         author = user
@@ -107,8 +108,8 @@ function toggleBoxForNewUser(met){
             return null
         }
         
-        localStorage.setItem('user', colocar session)
-        author = colocar session
+        localStorage.setItem('user', forasteyros)
+        author = forasteyros
         toggleBoxForNewUser('tog')
     }
 }
