@@ -3,7 +3,7 @@ var info = {
     numberMessages: 0,
     connected: 0
 }
-var author = 'forasteyros'
+var author = ''
 
 
 socket.on('receivedMessage', function(message){
