@@ -3,7 +3,7 @@ var info = {
     numberMessages: 0,
     connected: 0
 }
-var author = 'acho que colocar session aqui já resolve'
+var author = 'forasteyros'
 
 
 socket.on('receivedMessage', function(message){
@@ -36,7 +36,7 @@ function getAuthor(){
         author = user
     }
     else if(!user){
-        author = colocar session
+        author = forasteyros
     }
 }
 
