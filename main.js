@@ -123,11 +123,7 @@ function toggleBoxForNewUser(met){
 */
 
 function toggleBoxForNewUser(met){
-    if(met === 'tog'){
-        let input = document.getElementById('enter-user');
-        input.classList.toggle('active');
-        input.focus()
-    }
+    
    let newUser = forasteyrosxxx;
         localStorage.setItem('user', newUser)
         author = newUser
