@@ -4,7 +4,7 @@ var info = {
     connected: 0
 }
 var author = ''
-var forasteyros = '13'
+var forasteyros = 'forasteyros'
 
 
 socket.on('receivedMessage', function(message){
@@ -34,7 +34,7 @@ function getAuthor(){
         author = user
     }
     else if(!user){
-        toggleBoxForNewUser('tog')
+        toggleBoxForNewUser('get')
     }
 }
 
@@ -92,12 +92,6 @@ function renderConnectionsInfo(){
 }
 
 function toggleBoxForNewUser(met){
-    if(met === 'tog'){
-        let newUser = forasteyros
-        console.log("Hello world111!");
-        input.classList.toggle('active');
-        input.focus()
-    }
     if(met === 'get'){
         let newUser = forasteyros
         console.log("Hello world1!");
@@ -109,7 +103,7 @@ function toggleBoxForNewUser(met){
         
         localStorage.setItem('user', newUser)
         author = newUser
-        toggleBoxForNewUser('tog')
+        toggleBoxForNewUser('get')
     }
 }
 
