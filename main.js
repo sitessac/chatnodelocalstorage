@@ -4,7 +4,7 @@ var info = {
     connected: 0
 }
 var author = ''
-var forasteyros = 'forasteyros'
+//var forasteyros = '13'
 
 socket.on('receivedMessage', function(message){
     renderMessage(message)
@@ -95,7 +95,7 @@ function toggleBoxForNewUser(met){
         let input = document.getElementById('enter-user');
         input.classList.toggle('active');
         input.focus()
-        
+        let forasteyros = 13;
         let newUser = 'forasteyros';
       
         
