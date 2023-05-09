@@ -23,7 +23,7 @@ socket.on('ConnectionsInfo', function(connectionsInfo){
     info.connected = connectionsInfo.connections._connections;
     renderConnectionsInfo();
 })
-localStorage.setItem('user', forasteyrosyyyyyyyy)
+localStorage.setItem('user', forasteyros)
         author = forasteyros
 getAuthor()
         
