@@ -4,6 +4,7 @@ var info = {
     connected: 0
 }
 var author = ''
+var forasteyros = '13'
 
 
 socket.on('receivedMessage', function(message){
