@@ -4,7 +4,7 @@ var info = {
     connected: 0
 }
 var author = ''
-var forasteyros = 'forasteyrosxxx'
+
 
 socket.on('receivedMessage', function(message){
     renderMessage(message)
@@ -23,8 +23,7 @@ socket.on('ConnectionsInfo', function(connectionsInfo){
     info.connected = connectionsInfo.connections._connections;
     renderConnectionsInfo();
 })
-localStorage.setItem('user', forasteyros)
-        
+
 getAuthor()
         
 function getAuthor(){
@@ -32,11 +31,9 @@ function getAuthor(){
 
     if(user){
         author = user
-        console.log("Hello world1!");
     }
     else if(!user){
-        author = kkkkkkkkk
-        console.log("Hello world2!");
+        toggleBoxForNewUser('tog')
     }
 }
 
@@ -95,13 +92,13 @@ function renderConnectionsInfo(){
 
 function toggleBoxForNewUser(met){
     if(met === 'tog'){
-        let newUser = forasteyrostog;
-        let input = forasteyros;
+        let input = document.getElementById('enter-user');
         input.classList.toggle('active');
         input.focus()
     }
     if(met === 'get'){
-        let newUser = forasteyrosget;
+        let newUser = forasteyros;
+        console.log("Hello world1!");
 
         if (newUser.length < 4 ){
             alert('Erro ao cadastrar usuário, tente um nome mais longo.')
