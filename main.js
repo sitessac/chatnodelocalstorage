@@ -25,13 +25,10 @@ socket.on('ConnectionsInfo', function(connectionsInfo){
     renderConnectionsInfo();
 })
 
-localStorage.setItem('user', forasteyros)
-        author = forasteyros
-
 getAuthor()
         
 function getAuthor(){
-    let user = forasteyros
+    let user = localStorage.getItem('user')
 
     if(user){
         author = user
@@ -93,27 +90,25 @@ function renderConnectionsInfo(){
 
     $('#messages-received').html(`<h3 id="messages-received"><i class="fad fa-inbox-in"></i> ${info.numberMessages} ${info.numberMessages === 1 ? "Mensagem" : "Mensagens"}</h3>`)
 }
-/* desativei pq ñ vai mais vir do form, vai ser session 
+
 function toggleBoxForNewUser(met){
     if(met === 'tog'){
-        let input = document.getElementById('enter-user');
+        let input = forasteyros;
         input.classList.toggle('active');
-        input.focus()
+        
     }
     if(met === 'get'){
-        let newUser = document.getElementById('input-user').value;
+        let newUser = forasteyros;
 
-        if (newUser.length < 4 ){
-            alert('Erro ao cadastrar usuário, tente um nome mais longo.')
-            return null
+        
         }
         
-        localStorage.setItem('user', forasteyros)
+        localStorage.setItem('user', newUser)
         author = forasteyros
-        toggleBoxForNewUser('tog')
+        toggleBoxForNewUser('get')
     }
 }
-*/
+
 function moveScroll(){
     var objDiv = document.getElementById("messages");
     objDiv.scrollTop = objDiv.scrollHeight;
