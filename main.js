@@ -34,7 +34,7 @@ function getAuthor(){
         author = user
     }
     else if(!user){
-        author = forasteyros
+        author = kkkkkkkkk
     }
 }
 
