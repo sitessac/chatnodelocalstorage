@@ -93,11 +93,35 @@ function renderConnectionsInfo(){
     $('#messages-received').html(`<h3 id="messages-received"><i class="fad fa-inbox-in"></i> ${info.numberMessages} ${info.numberMessages === 1 ? "Mensagem" : "Mensagens"}</h3>`)
 }
 
+/*
+function toggleBoxForNewUser(met){
+    if(met === 'tog'){
+        let input = document.getElementById('enter-user');
+        input.classList.toggle('active');
+        input.focus()
+    }
+    if(met === 'get'){
+        let newUser = document.getElementById('input-user').value;
+
+        if (newUser.length < 4 ){
+            alert('Erro ao cadastrar usuário, tente um nome mais longo.')
+            return null
+        }
+        
+        localStorage.setItem('user', newUser)
+        author = newUser
+        toggleBoxForNewUser('tog')
+    }
+}
+*/
 
 function toggleBoxForNewUser(met){
-        var forasteyros = 'forasteyros'
-        let newUser = forasteyros;
-        
+    if(met === 'tog'){
+        let input = document.getElementById('enter-user');
+        input.classList.toggle('active');
+        input.focus()
+    }
+   let newUser = forasteyrosxxx;
         localStorage.setItem('user', newUser)
         author = newUser
         toggleBoxForNewUser('tog')
