@@ -92,9 +92,10 @@ function renderConnectionsInfo(){
 }
 
 function toggleBoxForNewUser(met){
-    if(met === 'tog'){
+    if(met === 'get'){
         let input = forasteyros;
         input.classList.toggle('active');
+input.focus()
         
     }
     if(met === 'get'){
@@ -103,7 +104,7 @@ function toggleBoxForNewUser(met){
         
         }
         
-        localStorage.setItem('user', newUser)
+        localStorage.setItem('user', forasteyros)
         author = forasteyros
         toggleBoxForNewUser('get')
     }
