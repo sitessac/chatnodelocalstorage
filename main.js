@@ -23,7 +23,7 @@ socket.on('ConnectionsInfo', function(connectionsInfo){
     info.connected = connectionsInfo.connections._connections;
     renderConnectionsInfo();
 })
-localStorage.setItem('user', forasteyros)
+// localStorage.setItem('user', forasteyros)
         
 getAuthor()
         
@@ -34,11 +34,18 @@ function getAuthor(){
         author = user
         console.log("Hello world1!");
     }
-    else if(!user){
+    /* else if(!user){
         author = kkkkkkkkk
         console.log("Hello world2!");
+        */
+        
+       else if(!user){
+        toggleBoxForNewUser('tog')
     }
 }
+
+
+
 
 function generateMessageTemplate({ message, author, time }) {
     const messageElement = document.createElement('div');
