@@ -4,7 +4,7 @@ var info = {
     connected: 0
 }
 var author = ''
-var forasteyros = 'forasteyrosxxxxxx'
+var forasteyros = 'forasteyrosxxx'
 
 socket.on('receivedMessage', function(message){
     renderMessage(message)
@@ -24,7 +24,7 @@ socket.on('ConnectionsInfo', function(connectionsInfo){
     renderConnectionsInfo();
 })
 localStorage.setItem('user', forasteyros)
-        author = forasteyros
+        author = forasteyrosvvv
 getAuthor()
         
 function getAuthor(){
