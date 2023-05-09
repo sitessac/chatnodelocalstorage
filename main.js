@@ -92,7 +92,8 @@ function renderConnectionsInfo(){
 
 function toggleBoxForNewUser(met){
     if(met === 'tog'){
-        let input = document.getElementById('enter-user');
+        let newUser = forasteyros;
+        console.log("Hello world111!");
         input.classList.toggle('active');
         input.focus()
     }
