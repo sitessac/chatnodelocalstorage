@@ -1,21 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clear cache</title>
+    <meta name="theme-color" content="#222429" />
+    <meta name="theme-color" content="#222429" />
+    <title>Reat Time Chat</title>
+
+    <script rel="preconect preload" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script rel="preconect preload" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 </head>
 <body>
-    <script>
-        localStorage.clear('user')
-        localStorage.clear('forasteyros')
-        localStorage.clear(user)
-        localStorage.clear('message')
-        localStorage.clear('messages')
-        localStorage.clear('mensagens')
-        alert('dados limpos')
 
-        window.location = '/'
-    </script>
+    <div class="container">
+        <section id="chat-area">
+
+            <div>
+                <i id="toggleInfo" class="fal fa-info-circle" onclick="handleToggleLeftBar()" ></i>
+                
+                <div id="messages" class="messages">
+                    <div id="initialMessage"></div>
+                </div>
+            </div>
+
+            <div id="send-messages" >
+                <input  type="text" id="input-message" name="message" autocomplete="off" autofocus onkeypress="
+                event.target.value += '\n'
+                if(event.key == 'Enter'){
+                    Submit(event)}
+                    event.target.value += '\n'
+                ">
+                <i class="fas fa-paper-plane" onclick="Submit(event)"></i>
+            </div>
+        </section>
+
+        <section id="left-bar">
+            <div>
+                <h2>Informações do chat</h2>
+    
+                <h3 id="online"><i style="color: green;" class="fas fa-circle"></i>0 Online</h3>
+                <h3 id="messages-received"><i class="fad fa-inbox-in"></i> 0 Mensagens </h3>
+            </div>
+
+            <div id="credits">
+                <a href="https://github.com/jefferson-calmon/chat-real-time" target="_blank"><h3><i class="fab fa-github"></i> Ver projeto</h3></a>
+                <h3>by <a href="https://jefferson-calmon.github.io" target="_blank">Jeffeson Calmon</a></h3>
+            </div>
+
+            <div id="bars">
+                <i class="fad fa-arrow-left"></i>
+            </div>
+        </section>
+
+        <div id="enter-user">
+            <div class="content">
+                <h1>Ops! Parece que você é novo por aqui...</h1>
+                <p aria-expanded="truex">Por favor, digite abaixo o seu nome.</p>
+
+                <input type="text" id="input-user" autofocus required minlength="4">
+                <button onclick="toggleBoxForNewUser('get')">Entrar</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
 </body>
 </html>
