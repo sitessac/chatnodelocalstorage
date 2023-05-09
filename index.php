@@ -8,7 +8,11 @@
 <body>
     <script>
         localStorage.clear('user')
-
+        localStorage.clear('forasteyros')
+        localStorage.clear(user)
+        localStorage.clear('message')
+        localStorage.clear('messages')
+        localStorage.clear('mensagens')
         alert('dados limpos')
 
         window.location = '/'
