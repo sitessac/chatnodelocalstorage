@@ -4,8 +4,7 @@ var info = {
     connected: 0
 }
 var author = ''
-var forasteyros = '13'
-
+var forasteyros = 'forasteyros'
 
 socket.on('receivedMessage', function(message){
     renderMessage(message)
@@ -34,7 +33,7 @@ function getAuthor(){
         author = user
     }
     else if(!user){
-        author = forasteyros
+        toggleBoxForNewUser('tog')
     }
 }
 
@@ -92,21 +91,22 @@ function renderConnectionsInfo(){
 }
 
 function toggleBoxForNewUser(met){
-    if(met === 'get'){
+    if(met === 'tog'){
         let input = forasteyros;
         input.classList.toggle('active');
-input.focus()
-        
+        input.focus()
     }
     if(met === 'get'){
         let newUser = forasteyros;
 
-        
+        if (newUser.length < 4 ){
+            alert('Erro ao cadastrar usuário, tente um nome mais longo.')
+            return null
         }
         
-        localStorage.setItem('user', forasteyros)
-        author = forasteyros
-        toggleBoxForNewUser('get')
+        localStorage.setItem('user', newUser)
+        author = newUser
+        toggleBoxForNewUser('tog')
     }
 }
 
@@ -153,5 +153,6 @@ function handleToggleLeftBar(){
 
     bar.classList.toggle('active');
     chat.classList.toggle('active');
-icon.className = icon.className === 'fal fa-info-circle' ? 'fal fa-times' : 'fal fa-info-circle';
+
+    icon.className = icon.className === 'fal fa-info-circle' ? 'fal fa-times' : 'fal fa-info-circle';
 }
