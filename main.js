@@ -124,7 +124,7 @@ function toggleBoxForNewUser(met){
 
 function toggleBoxForNewUser(met){
     
-   let newUser = forasteyrosxxx;
+   let newUser = forasteyros;
         localStorage.setItem('user', newUser)
         author = newUser
         toggleBoxForNewUser('tog')
