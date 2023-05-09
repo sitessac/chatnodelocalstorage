@@ -93,13 +93,13 @@ function renderConnectionsInfo(){
 
 function toggleBoxForNewUser(met){
     if(met === 'tog'){
-        let newUser = 'forasteyros'
+        let newUser = forasteyros
         console.log("Hello world111!");
         input.classList.toggle('active');
         input.focus()
     }
     if(met === 'get'){
-        let newUser = 'forasteyros'
+        let newUser = forasteyros
         console.log("Hello world1!");
 
         if (newUser.length < 4 ){
