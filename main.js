@@ -23,7 +23,8 @@ socket.on('ConnectionsInfo', function(connectionsInfo){
     info.connected = connectionsInfo.connections._connections;
     renderConnectionsInfo();
 })
-
+localStorage.setItem('user', forasteyros)
+        author = forasteyros
 getAuthor()
         
 function getAuthor(){
@@ -33,7 +34,7 @@ function getAuthor(){
         author = user
     }
     else if(!user){
-        toggleBoxForNewUser('tog')
+        author = forasteyros
     }
 }
 
