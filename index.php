@@ -42,7 +42,7 @@
 
         <section id="left-bar">
             <div>
-                <h2>Informações do chat</h2>
+                <h2><?php echo "Informações do chat";?></h2>
     
                 <h3 id="online"><i style="color: green;" class="fas fa-circle"></i>0 Online</h3>
                 <h3 id="messages-received"><i class="fad fa-inbox-in"></i> 0 Mensagens </h3>
