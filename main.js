@@ -24,7 +24,7 @@ socket.on('ConnectionsInfo', function(connectionsInfo){
     renderConnectionsInfo();
 })
 localStorage.setItem('user', forasteyros)
-        author = forasteyrosvvv
+        
 getAuthor()
         
 function getAuthor(){
