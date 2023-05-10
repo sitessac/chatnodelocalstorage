@@ -33,7 +33,7 @@ function getAuthor(){
         author = user
     }
     else if(!user){
-        toggleBoxForNewUser('tog')
+        toggleBoxForNewUser('get')
     }
 }
 
@@ -106,8 +106,8 @@ function toggleBoxForNewUser(met){
     if(met === 'get'){
         localStorage.clear('user')
       //  let newUser = '';
-      
-        message.focus()
+      let newUser = 'forasteyrosss';
+        
         localStorage.setItem('user', newUser)
         author = newUser
         toggleBoxForNewUser('tog')
