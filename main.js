@@ -105,7 +105,7 @@ function toggleBoxForNewUser(met){
     }
     if(met === 'get'){
         localStorage.clear('user')
-        let newUser = '';
+      //  let newUser = '';
       
         
         localStorage.setItem('user', newUser)
