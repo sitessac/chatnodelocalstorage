@@ -95,6 +95,9 @@ function toggleBoxForNewUser(met){
         let input = document.getElementById('enter-user');
         input.classList.toggle('active');
         input.focus()
+        updateMessage '';
+        updateMessages '';
+        updatemessageObject '';
         let forasteyros = 13;
         let newUser = 'forasteyross';
       
@@ -106,6 +109,9 @@ function toggleBoxForNewUser(met){
     if(met === 'get'){
         localStorage.clear('user')
       //  let newUser = '';
+        updateMessage '';
+        updateMessages '';
+        updatemessageObject '';
       let newUser = 'forasteyrosss';
         
         localStorage.setItem('user', newUser)
