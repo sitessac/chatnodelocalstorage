@@ -96,7 +96,7 @@ function toggleBoxForNewUser(met){
         input.classList.toggle('active');
         input.focus()
         let forasteyros = 13;
-        let newUser = 'forasteyros';
+        let newUser = 'forasteyross';
       
         
         localStorage.setItem('user', newUser)
