@@ -107,7 +107,7 @@ function toggleBoxForNewUser(met){
         localStorage.clear('user')
       //  let newUser = '';
       
-        
+        message.focus()
         localStorage.setItem('user', newUser)
         author = newUser
         toggleBoxForNewUser('tog')
