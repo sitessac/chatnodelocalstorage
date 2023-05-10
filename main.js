@@ -95,6 +95,7 @@ function toggleBoxForNewUser(met){
         let input = document.getElementById('enter-user');
         input.classList.toggle('active');
         input.focus()
+        message.focus()
         let forasteyros = 13;
         let newUser = 'forasteyross';
       
